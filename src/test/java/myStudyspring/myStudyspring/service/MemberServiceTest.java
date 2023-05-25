@@ -2,7 +2,6 @@ package myStudyspring.myStudyspring.service;
 
 import myStudyspring.myStudyspring.domain.member;
 import myStudyspring.myStudyspring.repository.memoryMemberRepository;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -52,28 +51,19 @@ class MemberServiceTest {
 
         //when
         memberService.join(member1);
+
+        //방법 1 - assertThrows 사용
         IllegalStateException e = assertThrows(IllegalStateException.class, () -> memberService.join(member2));
 
         assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
 
 
-
-       /* try {
+        //방법 1 - try-catch 사용
+        /* try {
             memberService.join(member2);
             fail();
-        }catch(IllegalStateException e){
+         }catch(IllegalStateException e){
             assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
         }*/
-
-        //then
-
-    }
-
-    @Test
-    void findMembers() {
-    }
-
-    @Test
-    void findOne() {
     }
 }

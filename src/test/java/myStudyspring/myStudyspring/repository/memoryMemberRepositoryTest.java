@@ -6,7 +6,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
-import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -26,8 +25,9 @@ class memoryMemberRepositoryTest {
           member.setName("spring");
 
           repository.save(member);
-          member result = repository.findById(member.getId()).get(); //optional이어서 get으로 꺼냄
-//          Assertions.assertEquals(member, result);
+
+          //optional로 리턴되므로 get으로 데이터를 꺼냄
+          member result = repository.findById(member.getId()).get();
           assertThat(member).isEqualTo(result);
      }
 
