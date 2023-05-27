@@ -3,14 +3,18 @@ package myStudyspring.myStudyspring.service;
 import myStudyspring.myStudyspring.domain.member;
 import myStudyspring.myStudyspring.repository.memoryMemberRepository;
 import myStudyspring.myStudyspring.repository.memberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+
 
 public class MemberService {
 
     private final memberRepository memberRepository;
 
+    @Autowired
     public MemberService(memberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
