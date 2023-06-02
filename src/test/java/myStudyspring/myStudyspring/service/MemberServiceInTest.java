@@ -2,9 +2,6 @@ package myStudyspring.myStudyspring.service;
 
 import myStudyspring.myStudyspring.domain.member;
 import myStudyspring.myStudyspring.repository.memberRepository;
-import myStudyspring.myStudyspring.repository.memoryMemberRepository;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
