@@ -1,5 +1,6 @@
 package myStudyspring.myStudyspring;
 
+import myStudyspring.myStudyspring.aop.TimeTraceAop;
 import myStudyspring.myStudyspring.repository.*;
 import myStudyspring.myStudyspring.service.MemberService;
 import org.springframework.context.annotation.Bean;
@@ -43,5 +44,10 @@ public class SpringConfig {
 //
 ////          return new JpaMemberRepository(em);
 //
+//    }
+
+//    @Bean
+//    public TimeTraceAop timeTraceAop() {
+//        return new TimeTraceAop();
 //    }
 }
